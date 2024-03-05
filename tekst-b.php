@@ -21,8 +21,13 @@
 $naam = $_POST["naam"];
 $bestandsnaam = "$naam" . " " . date("m-d-Y H.i.s");
 $timestamp1 = date("d F Y H:i:s");
+// Retrieve redirection information from the URL
+$redirection = isset($_GET['redirection']) ? $_GET['redirection'] : '';
 $maakbestand = fopen("$bestandsnaam.txt", "w") or die("Unable to open file!");
 fwrite($maakbestand, "naam: $naam \r\nstarttijd: " . $timestamp1 . "\r\n");
+// Add redirection information to the text file
+fwrite($maakbestand, "redirection: $redirection \r\n");
+
 fclose($maakbestand);
 ?>
 
