@@ -1,0 +1,40 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 80ch;
+    margin: auto;
+    padding: 2rem;
+    font-family: Verdana, Arial, sans-serif;
+    color: #222;
+}
+
+body.a {
+    background-color: green;
+}
+body.thanks {
+    background-color: silver;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-flow: column;
+    gap: .25rem;
+    align-items: center;
+}
+
+input[type="submit"] {
+    font-size: 1.25rem;
+    padding: .5rem 1rem;
+}
+
+.button-start {
+    margin-top: 2rem;
+    width: fit-content;
+}
