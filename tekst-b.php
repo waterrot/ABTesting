@@ -23,7 +23,7 @@ fwrite($maakbestand, "naam: $naam \r\nstarttijd: " . $timestamp1 . "\r\n");
 fclose($maakbestand);
 ?>
 
-<body class="a">
+<body class="b">
 
     <h1>YouTube pakt downloadsites voor video's aan</h1>
     <p>

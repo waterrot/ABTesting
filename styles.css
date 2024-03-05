@@ -12,7 +12,14 @@ body {
 
 body.a {
     background-color: green;
+    font-size: 7.5pt; /* Arial 7.5 */
 }
+
+body.b {
+    background-color: blue;
+    font-size: 9.75pt; /* Arial 9.75 */
+}
+
 body.thanks {
     background-color: silver;
     text-align: center;
