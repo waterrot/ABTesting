@@ -84,6 +84,7 @@ fclose($maakbestand);
 
     <form method="post" action="thankyou.php">
         <input type="hidden" name="bestandsnaam" value="<?php echo $bestandsnaam; ?>" />
+        <input type="hidden" name="starttijd" value="<?php echo $timestamp1; ?>" />
         <input type="submit" name="Stuur" value="Klaar!" class="ready" />
     </form>
 

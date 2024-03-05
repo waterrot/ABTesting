@@ -28,6 +28,7 @@
     }
 
     // Redirect the user with redirection information in the URL
-    header("Location: $redirectURL?naam=$naam");
+    header("Location: $redirectURL?naam=$naam&redirection=$redirectURL");
+
     exit();
     ?>

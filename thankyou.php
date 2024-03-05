@@ -16,9 +16,20 @@ HIER KOMT DE TRACKING CODE VAN HOTJAR!!
 
 <?php
 $bestand = $_POST['bestandsnaam'];
+$starttijd = $_POST["starttijd"];
 $timestamp2 = date("d F Y H:i:s");
 $eindbestand = fopen("$bestand.txt", "a+") or die("Unable to open file!");
-fwrite($eindbestand, "eindtijd : " . $timestamp2);
+
+// Calculate the time spent on the website
+$starttime = strtotime($starttijd);
+$endtime = strtotime($timestamp2);
+$timespent_seconds = $endtime - $starttime;
+
+// Convert seconds to a readable format
+$timespent_readable = gmdate("H:i:s", $timespent_seconds);
+
+// Append the end time and time spent to the text file
+fwrite($eindbestand, "\r\neindtijd: $timestamp2 \r\ntijd op de website: $timespent_readable \r\n");
 fclose($eindbestand);
 ?>
 

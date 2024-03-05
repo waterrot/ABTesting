@@ -21,8 +21,8 @@
     $naam = $_GET["naam"];
     $bestandsnaam = "$naam" . " " . date("m-d-Y H.i.s");
     $timestamp1 = date("d F Y H:i:s");
-    // Retrieve redirection information from the URL
-    $redirection = isset($_POST['redirection']) ? $_POST['redirection'] : '';
+    // Retrieve redirection information from the URL using GET
+    $redirection = isset($_GET['redirection']) ? $_GET['redirection'] : '';
     $maakbestand = fopen("$bestandsnaam.txt", "w") or die("Unable to open file!");
     // Write both name, start time, and redirection information in a single fwrite statement
     fwrite($maakbestand, "naam: $naam \r\nstarttijd: $timestamp1 \r\nredirection: $redirection \r\n");
@@ -82,6 +82,7 @@
 
     <form method="post" action="thankyou.php">
         <input type="hidden" name="bestandsnaam" value="<?php echo $bestandsnaam; ?>" />
+        <input type="hidden" name="starttijd" value="<?php echo $timestamp1; ?>" />
         <input type="submit" name="Stuur" value="Klaar!" class="ready" />
     </form>
 

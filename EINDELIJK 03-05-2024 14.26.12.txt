@@ -1,0 +1,6 @@
+naam: EINDELIJK 
+starttijd: 05 March 2024 14:26:12 
+redirection: tekst-a.php 
+
+eindtijd: 05 March 2024 14:26:13 
+tijd op de website: 00:00:01 
