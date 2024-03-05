@@ -7,11 +7,14 @@
     <title>Tekst</title>
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Hotjar Tracking Code for https://www.staff.science.uu.nl/~nimwe105/a/ 
-
-HIER KOMT DE TRACKING CODE VAN HOTJAR!!
-
--->
+    <script type='text/javascript'>
+        window.smartlook||(function(d) {
+        var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+        var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+        c.charset='utf-8';c.src='https://web-sdk.smartlook.com/recorder.js';h.appendChild(c);
+        })(document);
+        smartlook('init', 'b821808c1cae8cd507c9f1ad48b09e4708ecb8c0', { region: 'eu' });
+</script>
 </head>
 
 <?php
