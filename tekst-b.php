@@ -18,16 +18,16 @@
 </head>
 
 <?php
-$naam = $_POST["naam"];
-$bestandsnaam = "$naam" . " " . date("m-d-Y H.i.s");
-$timestamp1 = date("d F Y H:i:s");
-// Retrieve redirection information from the URL
-$redirection = isset($_GET['redirection']) ? $_GET['redirection'] : '';
-$maakbestand = fopen("$bestandsnaam.txt", "w") or die("Unable to open file!");
-// Write both name, start time, and redirection information in a single fwrite statement
-fwrite($maakbestand, "naam: $naam \r\nstarttijd: $timestamp1 \r\nredirection: $redirection \r\n");
+    $naam = $_GET["naam"];
+    $bestandsnaam = "$naam" . " " . date("m-d-Y H.i.s");
+    $timestamp1 = date("d F Y H:i:s");
+    // Retrieve redirection information from the URL
+    $redirection = isset($_POST['redirection']) ? $_POST['redirection'] : '';
+    $maakbestand = fopen("$bestandsnaam.txt", "w") or die("Unable to open file!");
+    // Write both name, start time, and redirection information in a single fwrite statement
+    fwrite($maakbestand, "naam: $naam \r\nstarttijd: $timestamp1 \r\nredirection: $redirection \r\n");
 
-fclose($maakbestand);
+    fclose($maakbestand);
 ?>
 
 <body class="b">

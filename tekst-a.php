@@ -19,10 +19,10 @@
 </head>
 
 <?php
-$naam = $_POST["naam"];
+$naam = $_GET["naam"];
 $bestandsnaam = "$naam" . " " . date("m-d-Y H.i.s");
 $timestamp1 = date("d F Y H:i:s");
-// Retrieve redirection information from the URL
+// Retrieve redirection information from the URL using GET
 $redirection = isset($_GET['redirection']) ? $_GET['redirection'] : '';
 $maakbestand = fopen("$bestandsnaam.txt", "w") or die("Unable to open file!");
 // Write both name, start time, and redirection information in a single fwrite statement
@@ -30,6 +30,7 @@ fwrite($maakbestand, "naam: $naam \r\nstarttijd: $timestamp1 \r\nredirection: $r
 
 fclose($maakbestand);
 ?>
+
 
 <body class="a">
 
